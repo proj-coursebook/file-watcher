@@ -31,4 +31,8 @@ class FileWatcherImpl implements FileWatcher {
   }
 }
 
+// Export types for use in other packages
+export type { FileWatcher, WatchOptions, WatchCommander, WatchEvent };
+
+// Export the implementation for use in other packages
 export { FileWatcherImpl };

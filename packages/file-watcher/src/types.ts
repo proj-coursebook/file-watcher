@@ -1,7 +1,12 @@
+export const watchEvents = [
+  "add",
+  "addDir",
+  "change",
+  "unlink",
+  "unlinkDir",
+] as const;
 
-export const watchEvents = ['add', 'addDir', 'change', 'unlink', 'unlinkDir'] as const;
-
-type WatchEvent = typeof watchEvents[number];
+type WatchEvent = (typeof watchEvents)[number];
 
 interface WatchCommander {
   enableWatch: () => boolean;
@@ -17,7 +22,10 @@ interface WatchOptions {
 }
 
 interface FileWatcher {
-  watch(commander: WatchCommander, onChange: (path: string) => Promise<void>): void;
+  watch(
+    commander: WatchCommander,
+    onChange: (path: string) => Promise<void>,
+  ): void;
 }
 
 export type { FileWatcher, WatchOptions, WatchCommander, WatchEvent };
