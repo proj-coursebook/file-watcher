@@ -1,0 +1,24 @@
+{
+  "name": "chokidar-playground",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Trying out chokidar.",
+  "scripts": {
+    "demo-1": "tsx --no-warnings --watch ./demo-1.ts",
+    "demo-2": "tsx --no-warnings --watch ./demo-2.ts",
+    "demo-3": "tsx --no-warnings --watch ./demo-3.ts",
+    "demo-4": "tsx --no-warnings --watch ./demo-4.ts",
+    "demo-5": "tsx --no-warnings --watch ./demo-5.ts",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "chokidar": "^4.0.3",
+    "micromatch": "^4.0.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "tsx": "^4.19.4",
+    "typescript": "^5.0.0"
+  }
+}
