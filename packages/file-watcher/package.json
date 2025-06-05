@@ -1,6 +1,6 @@
 {
   "name": "@coursebook/file-watcher",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A minimal, type-safe file watcher for JavaScript/TypeScript. You can use it to watch for changes to files for example.",
   "type": "module",
   "main": "./dist/index.cjs",
