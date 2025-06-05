@@ -4,9 +4,8 @@
   "private": true,
   "type": "module",
   "description": "Minimal example usage of file-watcher.",
-  "main": "index.ts",
   "scripts": {
-    "start": "tsx --no-warnings ./index.ts",
+    "start": "tsx --no-warnings ./src/index.ts",
     "build": "tsc",
     "type-check": "tsc --noEmit"
   },
