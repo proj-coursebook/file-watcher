@@ -5,11 +5,11 @@
   "type": "module",
   "description": "Trying out chokidar.",
   "scripts": {
-    "demo-1": "tsx --no-warnings --watch ./demo-1.ts",
-    "demo-2": "tsx --no-warnings --watch ./demo-2.ts",
-    "demo-3": "tsx --no-warnings --watch ./demo-3.ts",
-    "demo-4": "tsx --no-warnings --watch ./demo-4.ts",
-    "demo-5": "tsx --no-warnings --watch ./demo-5.ts",
+    "demo-1": "tsx --no-warnings --watch ./src/demo-1.ts",
+    "demo-2": "tsx --no-warnings --watch ./src/demo-2.ts",
+    "demo-3": "tsx --no-warnings --watch ./src/demo-3.ts",
+    "demo-4": "tsx --no-warnings --watch ./src/demo-4.ts",
+    "demo-5": "tsx --no-warnings --watch ./src/demo-5.ts",
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
