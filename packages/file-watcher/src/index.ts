@@ -63,6 +63,7 @@ class FileWatcherImpl implements FileWatcher {
   private getChokidarOptions(): ChokidarOptions {
     return {
       ...chokidarOptions,
+      usePolling: this.watchOptions.usePolling,
       ignored: (path) => {
         this.logger.trace(`Checking if ${path} should be ignored.`);
         if (micromatch.isMatch(path, this.watchOptions.exclude!)) {
