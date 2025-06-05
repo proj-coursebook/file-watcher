@@ -46,7 +46,7 @@ Currently, the package is a thin wrapper around the `chokidar` package. But ther
 - `npm run test:ui` - Run tests with UI
 - `npm run lint` - Run ESLint
 - `npm run lint:fix` - Fix ESLint errors
-- `npm run format` - Check code formatting 
+- `npm run format` - Check code formatting
 - `npm run format:fix` - Format code with Prettier
 - `npm run validate` - Run all checks (types, lint, format, tests)
 - `npm run clean` - Clean the package (remove dist and coverage)
@@ -85,6 +85,7 @@ This package uses [`standard-version`](https://github.com/conventional-changelog
 This repository is set up to publish the package to NPM automatically using GitHub Actions:
 
 - **When does it publish?**
+
   - When you create a new GitHub Release (from the GitHub UI or by pushing a tag and creating a release), or
   - When you manually trigger the workflow from the GitHub Actions tab.
 

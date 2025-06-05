@@ -2,50 +2,17 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "tsx",
+      "name": "Debug Current Script",
       "type": "node",
       "request": "launch",
-
-      // Debug current file in VSCode
+      // Debug current file
       "program": "${file}",
-
-      /*
-       * Path to tsx binary
-       * Assuming locally installed
-       */
+      // Path to tsx binary (Assuming locally installed)
       "runtimeExecutable": "tsx",
-
-      /*
-       * Open terminal when debugging starts (Optional)
-       * Useful to see console.logs
-       */
+      "runtimeArgs": ["--no-warnings"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
-
-      // Files to exclude from debugger (e.g. call stack)
-      "skipFiles": [
-        // Node.js internal core modules
-        "<node_internals>/**",
-
-        // Ignore all dependencies (optional)
-        "${workspaceFolder}/node_modules/**"
-      ],
-
-      // Add the --no-warnings flag
-      "args": ["--no-warnings"]
-    },
-    {
-      "name": "Attach to process",
-      "type": "node",
-      "request": "attach",
-      "port": 9229,
-      "skipFiles": [
-        // Node.js internal core modules
-        "<node_internals>/**",
-
-        // Ignore all dependencies (optional)
-        "${workspaceFolder}/node_modules/**"
-      ]
+      "skipFiles": ["<node_internals>/**", "${workspaceFolder}/node_modules/**"]
     }
   ]
 }

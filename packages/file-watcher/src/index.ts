@@ -1,13 +1,13 @@
 import { watch, type ChokidarOptions } from "chokidar";
 import {
-  FileWatcher,
-  WatchOptions,
+  type FileWatcher,
+  type WatchOptions,
   FileWatcherError,
   FileWatcherErrorType,
-  LogLevel,
+  type LogLevel,
 } from "./types";
 import {
-  LogManager,
+  type LogManager,
   LogManagerImpl,
   type Logger,
 } from "@coursebook/simple-logger";

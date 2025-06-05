@@ -1,4 +1,4 @@
-import { LogLevel } from "@coursebook/simple-logger";
+import { type LogLevel } from "@coursebook/simple-logger";
 
 /**
  * Options for the file watcher

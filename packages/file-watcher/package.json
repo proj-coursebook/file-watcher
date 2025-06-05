@@ -2,24 +2,48 @@
   "name": "@coursebook/file-watcher",
   "version": "0.1.1",
   "description": "A minimal, type-safe file watcher for JavaScript/TypeScript. You can use it to watch for changes to files for example.",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
   "type": "module",
-  "files": [
-    "dist"
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "import": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "require": {
+      "types": "./dist/index.d.cts",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "keywords": [
+    "typescript",
+    "library",
+    "files",
+    "watcher"
   ],
+  "author": "Ali Madooei",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/proj-coursebook/file-watcher.git"
+  },
+  "homepage": "https://proj-coursebook.github.io/file-watcher/",
+  "bugs": {
+    "url": "https://github.com/proj-coursebook/file-watcher/issues"
+  },
   "scripts": {
     "start": "tsx --no-warnings ./src/index.ts",
     "debug": "tsx --inspect-brk ./src/index.ts",
     "dev": "tsx watch ./src/index.ts",
     "prebuild": "npm run validate",
-    "build": "tsc --project tsconfig.build.json",
+    "build": "tsup",
     "prepublishOnly": "npm run build",
     "type-check": "tsc --noEmit --project tsconfig.build.json",
     "lint": "eslint ",
     "lint:fix": "eslint --fix",
-    "format": "prettier --check \"src/**/*.ts\"",
-    "format:fix": "prettier --write \"src/**/*.ts\"",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write .",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
@@ -29,9 +53,11 @@
     "clean:all": "rm -rf dist coverage node_modules",
     "release": "standard-version"
   },
-  "keywords": [],
-  "author": "Ali Madooei",
-  "license": "MIT",
+  "dependencies": {
+    "@coursebook/simple-logger": "latest",
+    "chokidar": "^4.0.3",
+    "micromatch": "^4.0.8"
+  },
   "devDependencies": {
     "@types/micromatch": "^4.0.9",
     "@types/node": "^22.15.3",
@@ -42,22 +68,10 @@
     "eslint-plugin-prettier": "^5.1.3",
     "prettier": "^3.2.0",
     "standard-version": "^9.5.0",
+    "tsup": "^8.5.0",
     "tsx": "^4.19.4",
     "typescript": "^5.0.0",
     "typescript-eslint": "^8.31.1",
     "vitest": "^3.1.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/proj-coursebook/file-watcher.git"
-  },
-  "homepage": "https://proj-coursebook.github.io/file-watcher/",
-  "bugs": {
-    "url": "https://github.com/proj-coursebook/file-watcher/issues"
-  },
-  "dependencies": {
-    "@coursebook/simple-logger": "latest",
-    "chokidar": "^4.0.3",
-    "micromatch": "^4.0.8"
   }
 }
